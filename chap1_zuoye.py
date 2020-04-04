@@ -125,7 +125,7 @@ if __name__ == "__main__":
 
 
 #方法二 类 对象
-class phonebook:
+class PhoneBook:
 
     def add_record(self):
         name = input("请输入姓名：")
@@ -222,7 +222,7 @@ if __name__ == "__main__":
         5.退出      
         """
     print(menu)
-    phonebookobj = phonebook()
+    phonebookobj = PhoneBook()
     record_list = []
     while 1:
         oper = input("请输入操作：")
