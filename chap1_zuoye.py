@@ -1,4 +1,4 @@
-def add_record():
+、def add_record():
     name = input("请输入姓名：")
     phone = input("请输入电话号码：")
     record = {}
@@ -109,13 +109,13 @@ if __name__ == "__main__":
             else:
                 print(result)
         elif oper == '3':
+            delete_record()
+        elif oper == '4':
             result = change_record()
             if result is None:
                 print("修改失败")
             else:
                 print(result)
-        elif oper == '4':
-            delete_record()
         elif oper == '5':
             print("退出！")
             break
@@ -125,7 +125,7 @@ if __name__ == "__main__":
 
 
 #方法二 类 对象
-class PhoneBook:
+class phonebook:
 
     def add_record(self):
         name = input("请输入姓名：")
@@ -222,7 +222,7 @@ if __name__ == "__main__":
         5.退出      
         """
     print(menu)
-    phonebookobj = PhoneBook()
+    phonebookobj = phonebook()
     record_list = []
     while 1:
         oper = input("请输入操作：")
@@ -238,13 +238,13 @@ if __name__ == "__main__":
             else:
                 print(result)
         elif oper == '3':
+            phonebookobj.delete_record()
+        elif oper == '4':
             result = phonebookobj.change_record()
             if result is None:
                 print("修改失败")
             else:
                 print(result)
-        elif oper == '4':
-            phonebookobj.delete_record()
         elif oper == '5':
             print("退出！")
             break
